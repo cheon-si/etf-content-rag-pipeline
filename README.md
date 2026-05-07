@@ -46,6 +46,12 @@
 - [ADR-002: LSEG 메타데이터 JSON 박제 패턴](docs/adr/002-lseg-snapshot-pattern.md)
 - [ADR-003: Vector 검색 score 0.4 컷오프](docs/adr/003-vector-noise-cutoff.md)
 - [ADR-004: 왜 RAG, 왜 Fine-tuning이 아닌가](docs/adr/004-rag-over-finetuning.md)
+- [ADR-005: CRAG-style Evaluator + Fallback (Proposed)](docs/adr/005-crag-evaluator-fallback.md)
+
+## Research & PoC
+
+- [RAG 논문 5편 정리 — 본 시스템 관점](docs/research/rag-papers.md) — HyDE, Self-RAG, CRAG, GraphRAG, RAG Survey
+- [GraphRAG PoC 설계 — Kuzu + 본 시스템 wiki 활용](docs/poc/graphrag-design.md) — 다음 sprint 계획
 
 ## Impact Numbers
 
