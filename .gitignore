@@ -1,3 +1,8 @@
+# Environment / Secrets
+.env
+.env.local
+.env.*.local
+
 # Python
 __pycache__/
 *.py[cod]
@@ -10,27 +15,29 @@ env/
 *.egg-info/
 build/
 dist/
+.pytest_cache/
+.coverage
+htmlcov/
 
-# Environment
-.env
-.env.local
-.env.*.local
+# Data (entire folder local-only — never commit raw/processed data, DBs, indices)
+data/
 
-# Data (local only — never commit raw data or secrets)
-data/raw/
-data/interim/
-data/processed/
-data/rag/
+# DBs / Indices
 *.db
 *.sqlite
+*.sqlite3
 *.faiss
 *.parquet
 
-# LLM cache / outputs
+# Pipeline outputs
 output/
+results/
 logs/
 *.log
 cost_tracker.json
+
+# Extra Pipeline artifacts
+json/
 
 # IDE
 .vscode/
@@ -38,10 +45,8 @@ cost_tracker.json
 *.swp
 .DS_Store
 Thumbs.db
-
-# Notebooks
-.ipynb_checkpoints/
-*.ipynb_checkpoints
-
-# OS
 desktop.ini
+
+# Misc
+*.coverage
+=*.*
