@@ -35,16 +35,17 @@
 [11]  주간 이메일 발송
 ```
 
-자세한 다이어그램: [docs/architecture.md](docs/architecture.md) (TBA)
+자세한 다이어그램과 데이터 플로우: [docs/architecture.md](docs/architecture.md)
+프로젝트 전체 케이스 스터디: [docs/case-study.md](docs/case-study.md)
 
 ## Key Design Decisions
 
-이 프로젝트의 진짜 가치는 **왜 이렇게 만들었나**에 있습니다. 자세한 설계 결정 기록:
+이 프로젝트의 진짜 가치는 **왜 이렇게 만들었나**에 있습니다.
 
-- [ADR-001: Why SQLite + FAISS instead of Graph DB](docs/adr/001-storage-choice.md) (TBA)
-- [ADR-002: Why snapshot static metadata to JSON](docs/adr/002-static-snapshot-pattern.md) (TBA)
-- [ADR-003: Why min_score=0.4 for vector search cutoff](docs/adr/003-vector-noise-cutoff.md) (TBA)
-- [ADR-004: Why RAG, not fine-tuning](docs/adr/004-rag-over-finetuning.md) (TBA)
+- [ADR-001: SQLite + FAISS 조합 (Graph DB 미도입 이유 포함)](docs/adr/001-storage-choice.md)
+- [ADR-002: LSEG 메타데이터 JSON 박제 패턴](docs/adr/002-lseg-snapshot-pattern.md)
+- [ADR-003: Vector 검색 score 0.4 컷오프](docs/adr/003-vector-noise-cutoff.md)
+- [ADR-004: 왜 RAG, 왜 Fine-tuning이 아닌가](docs/adr/004-rag-over-finetuning.md)
 
 ## Impact Numbers
 
@@ -95,11 +96,13 @@ etf-content-rag-pipeline/
 
 ## Roadmap
 
-- [ ] Public 데이터셋 기반 재현 가능한 quickstart
-- [ ] 아키텍처 다이어그램 (Excalidraw)
-- [ ] ADR 4건
+- [x] 아키텍처 다이어그램 (Mermaid in [docs/architecture.md](docs/architecture.md))
+- [x] ADR 4건 (`docs/adr/`)
+- [x] Case study one-pager ([docs/case-study.md](docs/case-study.md))
+- [ ] Public 데이터셋(KRX, ETF Check) 기반 재현 가능한 quickstart
+- [ ] Quality eval 자동 측정 (할루시네이션·다양성·구체성)
 - [ ] Demo notebook
-- [ ] Optional: Graph RAG 확장 (Kuzu)
+- [ ] Optional: Graph RAG 확장 (Kuzu, 트리거 충족 시)
 
 ## Background
 
