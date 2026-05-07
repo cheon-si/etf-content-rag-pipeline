@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+build/
+dist/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Data (local only — never commit raw data or secrets)
+data/raw/
+data/interim/
+data/processed/
+data/rag/
+*.db
+*.sqlite
+*.faiss
+*.parquet
+
+# LLM cache / outputs
+output/
+logs/
+*.log
+cost_tracker.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# Notebooks
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# OS
+desktop.ini
